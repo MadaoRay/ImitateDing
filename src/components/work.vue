@@ -6,11 +6,24 @@
 			</span>
 			<span class="title">上海彦集电子商务有限公司</span>
 		</header>
-		<div>
-			<div>
-				<span></span>
-				<span></span>
-				<span></span>
+		<div style="margin-top:10px;border-top:1px solid #ccc;" class="main-func">
+			<div class="func">
+				<router-link to="/">
+					<div style="border:1px solid #ccc;border-radis:20%;padding:20px;">0</div>
+					<div>待我审批</div>
+				</router-link>
+			</div>
+			<div class="func">
+				<router-link to="/">
+					<div style="border:1px solid #ccc;border-radis:20%;padding:20px;">0</div>
+					<div>待我审批</div>
+				</router-link>
+			</div>
+			<div class="func">
+				<router-link to="/">
+					<div style="border:1px solid #ccc;border-radis:20%;padding:20px;">0</div>
+					<div>待我审批</div>
+				</router-link>
 			</div>
 		</div>
 		<footer style="position:fixed;bottom:0;">
@@ -65,5 +78,10 @@ a{
 
 .title{
 	margin-top:5px;
+}
+
+.main-func .func{
+	display: table-cell;
+	width:1%;
 }
 </style>
