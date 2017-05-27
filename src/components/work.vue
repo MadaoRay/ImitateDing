@@ -39,7 +39,7 @@
 		<div style="margin-top:1rem;border-top:1px solid #ddd;">
 			<div style="font-size:0.7rem">常用应用</div>
 			<div style="border-top:1px solid #ddd;border-bottom:1px solid #ddd;" class="regular-func">
-				<div>
+				<div class="regular-line">
 					<div class="func">
 						<router-link to="/">
 							<div>
@@ -67,7 +67,7 @@
 						</router-link>
 					</div>
 				</div>
-				<div>
+				<div class="regular-line">
 					<div class="func">
 						<router-link to="/">
 							<div>
@@ -93,6 +93,28 @@
 							</div>
 							<div>审批</div>
 						</router-link>
+					</div>
+				</div>
+				<div class="regular-line">
+					<div class="func">
+						<router-link to="/">
+							<div>
+								<div>
+								<img src="../assets/imgs/video.png" height="20" width="20" class="func-img bgc-orange">
+								</div>
+								<div>视频会议</div>
+							</div>
+						</router-link>
+					</div>
+					<div class="func border">
+						<router-link to="/">
+							<div>
+								<img src="../assets/imgs/pocket.png" height="20" width="20" class="func-img bgc-green">
+							</div>
+							<div>红包</div>
+						</router-link>
+					</div>
+					<div class="func">
 					</div>
 				</div>
 			</div>
@@ -141,6 +163,10 @@ text-align: center;
 	background-color: #EA2626;
 }
 
+.bgc-green{
+	background-color: #1CD890;
+}
+
 body{
 	max-width:640px;
 	margin:0 auto;
@@ -164,14 +190,19 @@ a{
 }
 
 .main-func{	
-	padding: 15px;
+    padding: 15px 0;
 	margin-top:10px;
 	border-top:1px solid #ddd;
 	border-bottom:1px solid #ddd;
+	display:-moz-box;
+	display:-webkit-box;
+	display:box;
 }
 
 .main-func .func{
-	display: table-cell;
+	-moz-box-flex:1;
+	-webkit-box-flex:1;
+	box-flex:1;
 	width:1%;	
 	@extend .text-center
 }
@@ -194,11 +225,19 @@ a{
 	margin: 0 auto;
 }
 
-.regular-func .func{
-	display: table-cell;
-	width:1%;
-	@extend .text-center;
+.regular-func .regular-line{
+	display:-webkit-box;
+	display:-moz-box;
+	display:inline-box;
+}
+
+.regular-func .func{  
+	-moz-box-flex: 1; 
+    -webkit-box-flex: 1; 
+	box-flex:1;
+	width: 1%;
 	padding:15px;
+	@extend .text-center
 }
 
 .regular-func .func .func-img{
@@ -210,5 +249,9 @@ a{
 	border-style:solid;
 	border-width:0 1px;
 	border-color:#ddd;
+}
+
+.regular-func>div:not(:first-child){
+	border-top:1px solid #ddd;
 }
 </style>
